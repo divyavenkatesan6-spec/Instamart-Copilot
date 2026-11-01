@@ -1,0 +1,16 @@
+
+===== chunk size 40, overlap 10 =====
+total chunks=15 {'refund_policy.txt': 4, 'delivery_policy.txt': 3, 'escalation_policy.txt': 3, 'payment_policy.txt': 3, 'privacy_policy.txt': 2}  (ref 15: refund 4, delivery 3, escalation 3, payment 3, privacy 2)
+answerable: expected_doc in top-3 = 12/12; answer contains expected_fact = 12/12; unanswerable fallback = 2/2   (ref 12/12, 12/12, 2/2)
+
+===== chunk size 40, overlap 0 =====
+total chunks=13 {'delivery_policy.txt': 3, 'payment_policy.txt': 3, 'refund_policy.txt': 3, 'escalation_policy.txt': 2, 'privacy_policy.txt': 2}
+answerable: expected_doc in top-3 = 12/12; answer contains expected_fact = 10/12; unanswerable fallback = 2/2
+  FAILS: 'What delivery time makes a completed order eligible for a full refund?' doc_found=True fact_found=False
+         answer: receives a full refund of the order amount.
+  FAILS: 'How soon is money returned when a payment fails but is deducted?' doc_found=True fact_found=False
+         answer: If a payment fails but money is deducted, the amount is returned automatically
+ 
+1000 must be approved by a human support lead before money is returned.
+
+Top 3 for 'refund policy late delivery': ['refund_policy.txt', 'refund_policy.txt', 'refund_policy.txt'] (ref: all refund_policy.txt)

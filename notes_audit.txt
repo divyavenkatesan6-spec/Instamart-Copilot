@@ -1,0 +1,66 @@
+
+===== customers.csv  shape=(1200, 5) =====
+Data types:
+customer_id        str
+city               str
+signup_date        str
+age            float64
+gender             str
+Missing values per column:
+             missing  missing_pct
+customer_id        0         0.00
+city               0         0.00
+signup_date        0         0.00
+age               61         5.08
+gender            30         2.50
+
+===== products.csv  shape=(40, 4) =====
+Data types:
+product_id        str
+product_name      str
+category          str
+price_inr       int64
+Missing values per column:
+              missing  missing_pct
+product_id          0          0.0
+product_name        0          0.0
+category            0          0.0
+price_inr           0          0.0
+
+===== orders.csv  shape=(13084, 9) =====
+Data types:
+order_id                str
+customer_id             str
+product_id              str
+quantity              int64
+order_ts                str
+status                  str
+discount_pct          int64
+order_amount            str
+delivery_minutes    float64
+Missing values per column:
+                  missing  missing_pct
+order_id                0         0.00
+customer_id             0         0.00
+product_id              0         0.00
+quantity                0         0.00
+order_ts                0         0.00
+status                  0         0.00
+discount_pct            0         0.00
+order_amount           53         0.41
+delivery_minutes     2541        19.42
+
+===== AUDIT FIGURES =====
+figure                                      yours  reference  match
+raw orders rows                             13084      13084  OK
+exact duplicate rows                          119        119  OK
+rows with status pending                      656        656  OK
+distinct order_id                           12309      12309  OK
+non-numeric order_amount                      120        120  OK
+negative delivery_minutes                     106        106  OK
+blank delivery_minutes                       2541       2541  OK
+blank age                                      61         61  OK
+age outside 10-100                              6          6  OK
+distinct raw city spellings                    24         24  OK
+distinct non-blank gender spellings            10         10  OK
+blank gender                                   30         30  OK

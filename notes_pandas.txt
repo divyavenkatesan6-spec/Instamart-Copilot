@@ -1,0 +1,23 @@
+Pivot grand total: 2998668.8 (SQL Q2 total 2998668.80)
+
+Per city (sum, mean, count):
+               total    mean  count
+city                               
+Bengaluru  523643.40  276.47   1894
+Chennai    463629.15  272.72   1700
+Delhi      502829.80  243.62   2064
+Hyderabad  528589.90  284.95   1855
+Mumbai     479058.50  297.00   1613
+Pune       500918.05  252.48   1984
+
+mean=269.91 median=135.00 skew=4.61
+Q1=64.80 Q2=135.00 Q3=297.00 IQR=232.20
+lower fence=-283.50 outliers below=0 | upper fence=645.30 outliers above=897
+
+Correlation matrix:
+                  order_amount  discount_pct  quantity  delivery_minutes
+order_amount             1.000        -0.095     0.087            -0.003
+discount_pct            -0.095         1.000    -0.000            -0.010
+quantity                 0.087        -0.000     1.000            -0.013
+delivery_minutes        -0.003        -0.010    -0.013             1.000
+Largest |correlation| pair: ('order_amount', 'discount_pct') -0.095

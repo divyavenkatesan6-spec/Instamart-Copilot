@@ -1,0 +1,10 @@
+[customers] city spellings: 24 -> 6
+[customers] ages outside 10-100 set to missing: 6
+[customers] missing ages filled with city median: 67
+[orders] exact duplicates removed: 119
+[orders] older pending/partial records removed: 656
+[orders] unparseable amounts filled from product price: 112
+[orders] negative delivery_minutes set to missing: 105
+[orders] completed orders given category-median delivery time: 774
+[orders] cancelled orders left with missing delivery_minutes (never delivered)
+[store] wrote data/clean/*.csv and data/instamart.db  (orders=12309, customers=1200)
